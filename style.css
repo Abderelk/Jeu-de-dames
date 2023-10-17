@@ -1,0 +1,62 @@
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: auto;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    width: 80vh;
+    height: 80vh;
+    grid-gap: 3px;
+    background-color: rgb(52, 51, 51);
+    border: solid 10px black;
+    box-shadow: 20px 20px 40px #111;
+}
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+}
+
+.marron {
+    background-color: rgb(139, 78, 31);
+    box-shadow: inset 3px 3px 9px rgba(255, 212, 146, .3);
+}
+
+.marronClair {
+    background-color: rgb(255, 212, 146);
+    box-shadow: inset 3px 3px 9px rgba(139, 78, 31, .6);
+
+}
+
+.pionNoir {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+    background-color: black;
+    box-shadow: inset 3px 3px 9px #FFF;
+
+}
+
+
+
+.pionBlanc {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 10px;
+
+    background-color: white;
+    box-shadow: inset 3px 3px 9px #111;
+}
