@@ -32,7 +32,23 @@ for (let i = 0; i < 10; i++) {
         // déplacement des pions
         cases.addEventListener('focus', function () {
             if (selectedPiece) {
-                this.appendChild(selectedPiece);
+                const currentPosition = selectedPiece.parentElement;
+                if (this === currentPosition) {
+                    // Si la case sélectionnée est la case actuelle du pion, ne rien faire
+                    return;
+                }
+                const position = this.getBoundingClientRect();
+                const currentPos = currentPosition.getBoundingClientRect();
+                const rowDiff = Math.abs(position.top - currentPos.top);
+                const colDiff = Math.abs(position.left - currentPos.left);
+
+                // Vérifier si le déplacement est d'une case en diagonale
+                if ((rowDiff < 100 && colDiff < 100)) {
+                    this.appendChild(selectedPiece);
+                    console.log('Déplacement réussi !');
+                } else {
+                    console.log('Déplacement invalide !');
+                }
             }
         });
     }
